@@ -1,0 +1,22 @@
+{
+  "name": "smu-mod-9-challenge-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VulcanDthGrip/SMU-mod-9-Challenge.git"
+  },
+  "author": "Luis Ayala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VulcanDthGrip/SMU-mod-9-Challenge/issues"
+  },
+  "homepage": "https://github.com/VulcanDthGrip/SMU-mod-9-Challenge#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
