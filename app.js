@@ -8,33 +8,33 @@ let questions = [
     type: "input",
     message: "What is your project title?",
     name: "projectTitle",
-}
+},
 {
     type: "input",
     message: "Provide a description for your project",
     name: "projectDescription",
-}
+},
 {
     type: "input",
     message: "What are the installation instructions for your project?",
     name: "projectInstallationInstructions",
-}
+},
 {
     type: "input",
     message: "What is the usage information for this project?",
     name: "projectUsage"
-}
+},
 {
     type: "input",
     message: "What are the contribution guidelines for this project?",
     name: "projectContributions"
 
-}
+},
 {
     type: "input",
     message: "What are the test instructions for this project?",
     name: "projectTestInstructions"
-}
+},
 {
     type: "list",  
     name: "License:",
