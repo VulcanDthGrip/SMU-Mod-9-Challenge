@@ -1,6 +1,6 @@
-var inquirer = require('inquirer');
-var fs =  require('fs');
-var readMeGenerator = require("./readMeGenerator");
+const inquirer = require('inquirer');
+const fs =  require('fs');
+const readMeGenerator = require('./readMeGenerator');
 
 let questions = [
 {
@@ -49,14 +49,27 @@ let questions = [
 }
 ];
 
-// Function to generate ReadMe file
-inquirer.createPromptModule(questions).then(function (response) {
-    console.log(response);
+// function to write readme file
+function writeReadme(fileName, data) {  
 
-    var content = readMeGenerator(response);
-    console.log(content);
-    fs.writeFile("./README.md", content, function(err) {
-        if (err) throw err
-        console.log("success");
-    });
-} );
+    fs.writeFile(fileName, data, function(err) {
+        console.log(fileName)
+        console.log(data)
+        if (err) {
+            return console.log(err)
+         } else {
+                console.log("success")
+            }
+        })
+    }
+// Function to run program
+function init() {
+    inquirer.createPromptModule(questions).then(function(data) {
+        writeReadme("ReadMe.md", readMeGenerator(data));
+        console.log(data)
+})
+}
+init();
+
+// Exports
+module.exports = questions;

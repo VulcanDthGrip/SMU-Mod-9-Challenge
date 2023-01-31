@@ -1,34 +1,39 @@
+const fs = require('fs');
+const inquirer = require('inquirer');
+const index = require('./index');
+
+
 function readMeGenerator(response) {
-    var content = '# ${response.projectTitle}   
+return`
 
 // Add project title here
-${response.projectTitle}
+# ${response.projectTitle}
 
 // Add project description here
-${response.projectDescription}
+
+## ${response.projectDescription}
 
 // Add installation instructions here
-${response.installationInstructions}
+
+## ${response.installationInstructions}
 
 // Add project usage here
-${response.projectUsage}
+
+## ${response.projectUsage}
 
 // Add project contributions here
-${response.projectContributions}
+
+## ${response.projectContributions}
 
 // Add test instructions here
-${response.testInstructions}
+
+## ${response.testInstructions}
 
 // Add license selection here
-${response.licenseSelection}
 
-};
+## ${response.licenseSelection}`;
 
+}
+
+// exports
 module.exports = readMeGenerator;
-
-
-
-
-
-
-

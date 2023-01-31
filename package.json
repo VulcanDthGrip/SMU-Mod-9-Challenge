@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/VulcanDthGrip/SMU-mod-9-Challenge#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.2.4"
   }
 }
