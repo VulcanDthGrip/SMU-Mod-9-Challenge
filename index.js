@@ -50,24 +50,28 @@ let questions = [
 ];
 
 // function to write readme file
-function writeReadme(fileName, data) {  
-
-    fs.writeFile(fileName, data, function(err) {
-        console.log(fileName)
-        console.log(data)
-        if (err) {
-            return console.log(err)
-         } else {
-                console.log("success")
+const writeReadme = fileCreate => {
+    return new Promise((resolve, reject) => {
+        fs.writeReadme('./generatedReadme.md', writeReadme, err => {
+            if (err) {
+                reject(err);
+                return;
             }
-        })
-    }
+            resolve({
+                ok: true
+            });
+        });
+    });
+};        
+        
 // Function to run program
 function init() {
-    inquirer.createPromptModule(questions).then(function(data) {
-        writeReadme("ReadMe.md", readMeGenerator(data));
-        console.log(data)
-})
+    inquirer.prompt(questions)
+    .then(function(data) {
+        console.log(data);
+        var fileCreate = readMeGenerator(data);
+        writeReadme(fileCreate)  
+});
 }
 init();
 
