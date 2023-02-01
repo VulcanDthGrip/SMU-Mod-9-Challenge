@@ -6,26 +6,45 @@ const index = require('./index');
 function readMeGenerator(response) {
 return`
 
-# Project 
+## Table of Contents
+### * [Project](#Project)
+### * [Description](#Description)
+### * [Installation](#Installation)
+### * [Project Usage](#ProjectUsage)
+### * [Project Contributions](#ProjectContributions)
+### * [Testing Instructions](#TestingInstructions)
+### * [Github Info](#GithubAccount)
+### * [Email Address](#EmailAddress)
+### * [License Info](#License)
+
+
+
+## Project 
 ## ${response.projectTitle}
 
-# Description
-## ${response.projectDescription}
+## Description
+### ${response.projectDescription}
 
-# Installation
-## ${response.projectInstallationInstructions}
+## Installation
+### ${response.projectInstallationInstructions}
 
-# Project Usage
-## ${response.projectUsage}
+## Project Usage
+### ${response.projectUsage}
 
-# Project Contributions
-## ${response.projectContributions}
+## Project Contributions
+### ${response.projectContributions}
 
-# Testing Instructions
-## ${response.projectTestInstructions}
+## Testing Instructions
+### ${response.projectTestInstructions}
 
-# License Info
-## ${response.License}`;
+## Github Repository Information
+### ${response.githubAccount}
+
+## Email Address
+### ${response.emailAddress}
+
+## License Info
+### ${response.License}`;
 
 }
 

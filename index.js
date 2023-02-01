@@ -35,6 +35,14 @@ let questions = [
     message: "What are the test instructions for this project?",
     name: "projectTestInstructions"
 },
+{   type: "input",
+    message: "What is your github account for this project?",
+    name: "githubAccount"
+},
+{   type: "input",
+    message: "What is your email address?",
+    name: "emailAddress"
+},
 {
     type: "list",  
     name: "License:",
