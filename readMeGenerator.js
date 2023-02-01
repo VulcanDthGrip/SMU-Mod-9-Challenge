@@ -6,32 +6,26 @@ const index = require('./index');
 function readMeGenerator(response) {
 return`
 
-// Add project title here
+## Project 
 # ${response.projectTitle}
 
-// Add project description here
-
+## Description
 ## ${response.projectDescription}
 
-// Add installation instructions here
+## Installation
+## ${response.projectInstallationInstructions}
 
-## ${response.installationInstructions}
-
-// Add project usage here
-
+## Project Usage
 ## ${response.projectUsage}
 
-// Add project contributions here
-
+## Project Contributions
 ## ${response.projectContributions}
 
-// Add test instructions here
+## Testing Instructions
+## ${response.projectTestInstructions}
 
-## ${response.testInstructions}
-
-// Add license selection here
-
-## ${response.licenseSelection}`;
+## License Info
+## ${response.License}`;
 
 }
 

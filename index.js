@@ -52,7 +52,7 @@ let questions = [
 // function to write readme file
 const writeReadme = fileCreate => {
     return new Promise((resolve, reject) => {
-        fs.writeReadme('./generatedReadme.md', writeReadme, err => {
+        fs.writeFile('./generatedReadme.md', fileCreate, err => {
             if (err) {
                 reject(err);
                 return;
@@ -68,8 +68,9 @@ const writeReadme = fileCreate => {
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {
-        console.log(data);
+    
         var fileCreate = readMeGenerator(data);
+        console.log(typeof fileCreate);
         writeReadme(fileCreate)  
 });
 }
