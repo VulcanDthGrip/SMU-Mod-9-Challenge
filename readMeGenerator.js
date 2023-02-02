@@ -1,44 +1,38 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { inherits } = require('util');
 const index = require('./index');
 
-function renderLicenseBadge(license) {
-    let badge = '';
+function LicenseBadge(license) {
     if(license === 'MIT') {
-        badge = '![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)'
+        return '![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)'
     } else if (license === 'Apache 2.0') {
-        badge = '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)'
+        return '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)'
     } else if (license === 'GPL v3.0') {
-        badge = '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
+        return '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
     } else {
-      badge = ""
-    }
-    return badge;
+      return license;
   }
+}
 
-  function renderLicenseLink(license) {
-    let licenseLink = '';
+  function LicenseLink(license) {
       if(license === 'MIT') {
-        licenseLink = 'https://choosealicense.com/licenses/mit/'
+        return 'https://choosealicense.com/licenses/mit/'
       } else if (license === 'Apache 2.0') {
-        licenseLink = 'http://www.apache.org/licenses/LICENSE-2.0'
+        return 'http://www.apache.org/licenses/LICENSE-2.0'
       } else if (license === 'GPL v3.0') {
-        licenseLink = 'https://www.gnu.org/licenses'
+        return 'https://www.gnu.org/licenses'
       } else {
-        licenseLink = ""
+        return license
       }
-      return licenseLink;
   }
 
-  function renderLicenseSection(license) {
-    let licenseSection = ''
+  function LicenseSection(license) {
     if(license === 'None') {
-      licenseSection = ''
+      return ''
     } else {
-      licenseSection =
-      `License: ${license} `
+      return license
     }
-    return licenseSection;
   }
 
 function readMeGenerator(response) {
@@ -47,8 +41,8 @@ return`
 
 # SMU-Mod-9-Challenge - ReadMe Generator
 
-## ${renderLicenseSection(response.license)} ${renderLicenseBadge(response.license)}
-### ${renderLicenseLink(response.license)}
+## ${LicenseSection(response.license)} ${LicenseBadge(response.license)}
+### ${LicenseLink(response.license)}
 
 ## Table of Contents
 ### * [Project](#Project)
@@ -84,12 +78,8 @@ return`
 ### ${response.githubAccount}
 
 ## Email Address
-### ${response.emailAddress}
-
-## License Information
-### ${response.license}`;
+### ${response.emailAddress}`;
 
 }
-
 // exports
 module.exports = readMeGenerator;

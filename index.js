@@ -45,7 +45,7 @@ let questions = [
 },
 {
     type: "list",  
-    name: "License:",
+    name: "license",
     message: "What is the license for this project?",
     choices: [
         "Apache License 2.0",

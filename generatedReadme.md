@@ -3,8 +3,8 @@
 
 # SMU-Mod-9-Challenge - ReadMe Generator
 
-## License: Github License  https://img.shields.io/github/license/Naereen/StrapDown.js.svg 
-### License URL: https://choosealicense.com/licenses/mit/
+## MIT ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
+### https://choosealicense.com/licenses/mit/
 
 ## Table of Contents
 ### * [Project](#Project)
@@ -19,28 +19,25 @@
 
 
 ## Project 
-### y
+### Readme Generator v0.1
 
 ## Description
-### y
+### Application for the automation and generation of a readme file
 
 ## Installation
-### yy
+### From the terminal window, type in 'node index.js' and press enter to run the application
 
 ## Project Usage
-### y
+### For users looking to autogenerate a readme file for their projects
 
 ## Project Contributions
-### y
+### Javascript and Node.js
 
 ## Testing Instructions
-### y
+### Add console.log to functions to validate input/outputs
 
 ## Github Repository Information
-### y
+### github.com/vulcandthgrip
 
 ## Email Address
-### y
-
-## License Information
-### undefined
+### saltwaterlou@yahoo.com
